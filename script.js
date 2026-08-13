@@ -1,30 +1,21 @@
 // Theme Toggle
 const themeBtn = document.getElementById('themeBtn');
 
-console.log('Theme button found:', themeBtn);
-
 // Check for saved theme or default to dark mode
 const savedTheme = localStorage.getItem('theme') || 'light';
-console.log('Saved theme:', savedTheme);
 
 if (savedTheme === 'dark') {
     document.body.classList.add('dark-mode');
     if (themeBtn) themeBtn.textContent = '◒ Light';
-    console.log('Applied dark mode from localStorage');
 }
 
 if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-        console.log('Theme button clicked');
         document.body.classList.toggle('dark-mode');
         const isDarkMode = document.body.classList.contains('dark-mode');
-        console.log('Dark mode is now:', isDarkMode);
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         themeBtn.textContent = isDarkMode ? '◒ Light' : '◓ Dark';
-        console.log('Button text updated to:', themeBtn.textContent);
     });
-} else {
-    console.error('Theme button not found!');
 }
 
 // Navigation and Routing
@@ -67,7 +58,7 @@ function showSection(sectionId) {
 // Handle hash changes
 window.addEventListener('hashchange', () => {
     const hash = window.location.hash.slice(1);
-    const sectionId = hash || 'about';
+    const sectionId = hash || getInitialSectionId();
     showSection(sectionId);
 });
 
@@ -81,8 +72,13 @@ navLinks.forEach(link => {
 });
 
 // Set initial view
-const initialHash = window.location.hash.slice(1) || 'about';
-showSection(initialHash);
+const getInitialSectionId = () => {
+    const hash = window.location.hash.slice(1);
+    if (document.getElementById(hash)) return hash;
+    if (document.getElementById('about')) return 'about';
+    return sections[0]?.id || '';
+};
+showSection(getInitialSectionId());
 
 // Outline Navigation
 function generateOutline(sectionId) {
