@@ -21,6 +21,8 @@
 						<li><a href="#BL-01" class="nav-link active">The True Purpose of Chess</a></li>
 						<li><a href="#BL-02" class="nav-link">Cansat GUI - How I built it</a></li>
 						<li><a href="#BL-04" class="nav-link">Should we use AI to code</a></li>
+						<li><a href="#BL-05" class="nav-link">FTTA - Building for 500+ users</a></li>
+						<li><a href="#BL-06" class="nav-link">IMDF - Filtering images by metadata</a></li>
 					</ul>
 				</nav>
 				<div class="theme-toggle">
@@ -103,6 +105,22 @@
 						<p>We can't totally neglect AI — it is really useful for boilerplate code and also good at teaching. If privacy is a concern, we can move to local LLMs, but the cost is literally huge for the GPU and computing power. My work isn't that secret, so I choose the normal path. I use OpenCode and Herdr with free AI models, since my use cases never exceeded that need. I'm also trying to use the bmad-method for the agents &amp; skills and customize them to my use cases. In the future I'll try to add my workflow here.</p>
 						<p>As a Backend Engineer, I prefer to focus on the logic and content of this site, so I use AI for repetitive frontend work like making the layout responsive. I wouldn't let AI write the content of this site — I use it for boring work and never let it touch the organic content and creative thinking process.</p>
 						<p>Being an extremist never ends well, and we've seen this pattern in history many times. So learn to be in the gray area.</p>
+					</div>
+				</section>
+				<section id="BL-05" class="page-section">
+					<h2>FTTA - Building a Faculty Time Tracking Application for 500+ Users</h2>
+					<div class="blog-list">						<span class="blog-date">August 05, 2026</span>
+						<p>Most private institutions still track faculty attendance on paper or in messy spreadsheets. FTTA was built to fix that. It's a full-stack web application that lets the admin monitor faculty availability, track their sessions, and keep student attendance records - all from a single dashboard.</p>
+						<p>The core requirement was access control. Only emails from the organization's allowed domains can log in, implemented with Google OAuth 2.0 and role-based access control (RBAC) through Passport.js. Admins see everything; faculty log their sessions and student details.</p>
+						<p>It's running in production right now with 500+ active users, deployed using Docker, Vercel and Heroku. The codebase is currently closed source.</p>
+					</div>
+				</section>
+				<section id="BL-06" class="page-section">
+					<h2>IMDF - A REST API to Filter Images by their Metadata</h2>
+					<div class="blog-list">						<span class="blog-date">August 10, 2026</span>
+						<p>Image Meta Data Filter (IMDF) is a REST API that stores images in the cloud and lets you filter them by the metadata embedded in the files - geo-location, capture date, device name and more.</p>
+						<p>Uploads are handled with Multer, files are stored in Cloudinary, and the metadata is persisted in MongoDB. The API is built with Node.js and Express, and deployed using Docker and Render.</p>
+						<p>The server-side logic stays simple: extract the metadata on upload, store it alongside the file reference, and return filtered results based on query parameters.</p>
 					</div>
 				</section>
 			</main>
