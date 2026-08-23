@@ -1,194 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jana</title>
-    <link rel="icon" type="image/x-icon" href="assets/jana.png"> <!--favicon -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <!-- Left Sidebar Navigation -->
-        <aside class="sidebar-left">
-            <div class="logo">
-                <a href="index.html#about"><img src="assets/jana.png" height="60" alt="logo"></a>
-                <h1>Jana</h1>
-            </div>
-            <nav class="nav-main">
-                <ul>
-                    <li><a href="#about" class="nav-link active">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#blog" class="nav-link">Blog</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="theme-toggle">
-                <button id="themeBtn" class="theme-btn">◓ Dark</button>
-            </div>
-        </aside>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Jana</title>
+		<link rel="icon" type="image/x-icon" href="assets/profile.png">
+		<!--favicon -->
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Left Sidebar Navigation -->
+			<aside class="sidebar-left">
+				<div class="logo">
+					<a href="index.html#about"><img src="assets/profile.png" height="100" alt="logo"></a>
+					<h1>Jana</h1>
+					<a href="https://x.com/JanaB99430"><img src="assets/x.png" height="30" width="30" alt="x"></a>
+					<a href="https://github.com/janardhan345"><img src="assets/github.png" height="30" width="30" alt="GitHub"></a>
+					<a href="mailto:janabalu694@gmail.com"><img src="assets/gmail.png" height="30" width="30" alt="gmail"></a>
+				</div>
+				<nav class="nav-main">
+					<ul>
+						<li><a href="#about" class="nav-link active">About</a></li>
+						<li><a href="#skills" class="nav-link">Skills</a></li>
+						<li><a href="#projects" class="nav-link">Projects</a></li>
+						<li><a href="#blog" class="nav-link">Blog</a></li>
+						<!-- <li><a href="#guides" class="nav-link">Guides</a></li> -->
+					</ul>
+				</nav>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- About Section -->
-            <section id="about" class="page-section active">
-                <div class="section-banner">
-                    <img src="assets/mc-ecsher-strange-loops.png" alt="About Section Banner">
-                </div>
-                <h1>About Me</h1>
-                <p>Welcome to my portfolio. I'm a passionate Backend Engineer.</p>
-                <hr>
-                <br>
-                <p>Hi, my name is Janardhan. I'm a Backend Engineer who builds applications that solve real-world problems, 
-                    and I love to talk about how software should make users genuinely want to pay for it, 
-                    because they think it truly deserves to be paid for. <a href="blog.html#BL-04">Should we Use AI to code? ↩</a></p>
-                <br>
-                <p>Built a GUI for a mini satellite (CANSAT) to receive telemetry data and visualize it in real time using Node.js 
-                    (Socket.IO), while storing telemetry values in PostgreSQL for further analysis and research.
-                    It was developed for a competition organized by ISRO and made it to the finals at the UP launch station. The application runs locally hosted and cannot be deployed.
-                    <a href="blog.html#BL-02">Learn More ↩</a> and here is the 
-                    <a href="https://gui-five-mauve.vercel.app/"> Client View ↩</a></p>
-                <br>
-                <p>Developed an API that lets users upload, store, and filter images based on meta-data (deployed on Render).</p>
-                <br>
-                <p>Built a full-stack application accessible only from allowed organization domains, letting admins monitor faculty availability and sessions while faculty log their sessions and student details. Implemented RBAC through Passport.js and Google OAuth 2.0 (currently in use with 500+ users, deployed on Heroku + Neon DB).</p>
-                <br>
-                <button class="contact-link" onclick="window.open('./assets/Janardhan_Resume_Backend_Engineer.pdf')">Download CV</button>
-            </section>
+				<div class="theme-toggle">
+					<button id="themeBtn" class="theme-btn">◓ Dark</button>
+				</div>
+			</aside>
 
-            <!-- Skills Section -->
-            <section id="skills" class="page-section">
-                <div class="section-banner">
-                    <img src="assets/escher-bond.jpg" alt="Skills Section Banner">
-                </div>
-                <h2>Skills</h2>
-                <div class="skills-container">
-                    <div class="skill-category">
-                        <h3>Backend</h3>
-                        <ul>
-                            <li>Node.js / Express / Socket IO</li>
-                            <li> REST API / Web Sockets</li>
-                            <li>Python / Flask</li>
-                            <li>SQLite / PostgreSQL / Prisma</li>
-                            <li>MongoDb/ Mongoose</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Tools</h3>
-                        <ul>
-                            <li>Git / GitHub / Codeberg</li>
-                            <li>Heroku / NeonDB</li>
-                            <li>CURL / Postman</li>
-                            <li>Docker</li>
-                            <li>Zed / VS Code</li>
-                            <!-- <li>herdr / Opencode(AI agents) with bmad-method</li> -->
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Auth & Security</h3>
-                        <ul>
-                            <li>JWT / Oauth 2.0 / Passport JS</li>
-                            <li>CORS / Helmet / bcrypt</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+			<!-- Main Content -->
+			<main class="main-content">
+				<!-- About Section -->
+				<section id="about" class="page-section active">
+					<div class="section-banner">
+						<img src="assets/banner.webp" alt="About Section Banner">
+					</div>
+					<h1>About Me</h1>
+					<p>Welcome to my portfolio. I'm a passionate Backend Engineer.</p>
+					<hr>
+					<br>
+					<p>Hi, my name is Janardhan. I'm a Backend Engineer who builds applications that solve real-world problems,
+						and I love to talk about how software should make users genuinely want to pay for it,
+						because they think it truly deserves to be paid for. <a href="blog.html#BL-04">Should we Use AI to code? ↩</a></p>
+					<br>
+					<p>Built a GUI for a mini satellite (CANSAT) to receive telemetry data and visualize it in real time using Node.js
+						(Socket.IO), while storing telemetry values in PostgreSQL for further analysis and research.
+						It was developed for a competition organized by ISRO and made it to the finals at the UP launch station. The application runs locally hosted and cannot be deployed.
+						<a href="blog.html#BL-02">Learn More ↩</a>
+						and here is the
+						<a href="https://gui-five-mauve.vercel.app/">
+							Client View ↩
+						</a></p>
+					<br>
+					<p>Developed an API that lets users upload, store, and filter images based on meta-data (deployed on Render).</p>
+					<br>
+					<p>Built a full-stack application accessible only from allowed organization domains, letting admins monitor faculty availability and sessions while faculty log their sessions and student details. Implemented RBAC through Passport.js and Google OAuth 2.0 (currently in use with 500+ users, deployed on Heroku + Neon DB).</p>
+					<br>
+					<button class="theme-btn" onclick="window.open('./assets/Janardhan_Resume_Backend_Engineer.pdf')">Download CV</button>
+				</section>
 
-            <!-- Projects Section -->
-            <section id="projects" class="page-section">
-                <div class="section-banner">
-                    <img src="assets/3.jpg" alt="Projects Section Banner">
-                </div>
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Satellite GUI</h3>
-                        <p>A GUI dashboard developed for the IN-Space (ISRO) competition that receives live telemetry packets, 
-                            visualizes them, and stores them in a database simultaneously for further analysis of the received data.</p>
-                        <a href="https://gui-five-mauve.vercel.app/" class="project-link">View Project →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Image Meta Data Filter (IMDF)</h3>
-                        <p>An API to filter your images based on meta-data. 
-                            Upload images to the cloud and filter them by meta-data such as geo-location, date, device name, etc.</p>
-                        <a href="https://image-meta-data-filter.onrender.com/api/v1" class="project-link">View Project →</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Faculty Time Tracking Application (FTTA)</h3>
-                        <p>A full-stack application that helps the admin track faculty sessions, 
-                            and monitor active faculty to assign them tasks efficiently.</p>
-                        <a href="https://ftta.vercel.app" class="project-link">View Project →</a>
-                    </div>
-                </div>
-            </section>
+				<!-- Skills Section -->
+				<section id="skills" class="page-section">
+					<div class="section-banner">
+						<img src="assets/escher-bond.jpg" alt="Skills Section Banner">
+					</div>
+					<h2>Skills</h2>
+					<div class="skills-container">
+						<div class="skill-category">
+							<h3>Backend</h3>
+							<ul>
+								<li>Node.js / Express / Socket IO</li>
+								<li>
+									REST API / Web Sockets
+								</li>
+								<li>Python / Flask</li>
+								<li>SQLite / PostgreSQL / Prisma</li>
+								<li>MongoDb/ Mongoose</li>
+							</ul>
+						</div>
+						<div class="skill-category">
+							<h3>Tools</h3>
+							<ul>
+								<li>Git / GitHub / Codeberg</li>
+								<li>Heroku / NeonDB</li>
+								<li>CURL / Postman</li>
+								<li>Docker</li>
+								<li>Zed / VS Code</li>
+								<!-- <li>herdr / Opencode(AI agents) with bmad-method</li> -->
+							</ul>
+						</div>
+						<div class="skill-category">
+							<h3>Auth & Security</h3>
+							<ul>
+								<li>JWT / Oauth 2.0 / Passport JS</li>
+								<li>CORS / Helmet / bcrypt</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 
-            <!-- Blog Section -->
-            <section id="blog" class="page-section">
-                <div class="section-banner">
-                    <img src="assets/mc-escher-spherical-world.jpg" alt="sperical_world">
-                </div>
-                <h2>Blog</h2>
-                <div class="blog-list">
-                    <article class="blog-item">
-                        <h3>The True Purpose of Chess</h3>
-                        <span class="blog-date">July 08, 2026</span>
-                        <p>Chess makes us think like strategists and also helps us think in patterns. first don't let these thoughts come while playing cause 
-                            you will gradually understand what skills you are gaining while playing chess and learn how to apply it in programs or even in real life as well. 
-                         </p>
-                        <a href="blog.html#BL-01" class="read-more">Read more →</a>
-                    </article>
-                    <article class="blog-item">
-                        <h3>How I built it - CANSAT GUI</h3>
-                        <span class="blog-date">November 02, 2025</span>
-                        <p>As I joined the team I was instructed to build the GUI using pyQt or even use C++, cause that's</p>
-                        <a href="blog.html#BL-02" class="read-more">Read more →</a>
-                    </article>
-                    <article class="blog-item">
-                        <h3>Should we Use AI to code ?</h3>
-                        <span class="blog-date">March 03, 2026</span>
-                        <p>There are two sides to this: use AI to code and do the thinking yourself...</p>
-                        <a href="blog.html#BL-04" class="read-more">Read more →</a>
-                    </article>
-                    <article class="blog-item">
-                        <h3>FTTA - Building for 500+ Users</h3>
-                        <span class="blog-date">August 05, 2026</span>
-                        <p>How I built a full-stack app with RBAC via Passport.js and Google OAuth, now used by 500+ users in production.</p>
-                        <a href="blog.html#BL-05" class="read-more">Read more →</a>
-                    </article>
-                    <article class="blog-item">
-                        <h3>IMDF - Filtering Images by Metadata</h3>
-                        <span class="blog-date">August 10, 2026</span>
-                        <p>Upload images to the cloud and filter them by geo-location, date and device name with a REST API.</p>
-                        <a href="blog.html#BL-06" class="read-more">Read more →</a>
-                    </article>
-                </div>
-            </section>
+				<!-- Projects Section -->
+				<section id="projects" class="page-section">
+					<div class="section-banner">
+						<img src="assets/3.jpg" alt="Projects Section Banner">
+					</div>
+					<h2>Projects</h2>
+					<div class="projects-grid">
+						<div class="project-card">
+							<h3>Satellite GUI</h3>
+							<p>A GUI dashboard developed for the IN-Space (ISRO) competition that receives live telemetry packets,
+								visualizes them, and stores them in a database simultaneously for further analysis of the received data.</p>
+							<a href="https://gui-five-mauve.vercel.app/" class="project-link">View Project →</a>
+						</div>
+						<div class="project-card">
+							<h3>Image Meta Data Filter (IMDF)</h3>
+							<p>An API to filter your images based on meta-data.
+								Upload images to the cloud and filter them by meta-data such as geo-location, date, device name, etc.</p>
+							<a href="https://image-meta-data-filter.onrender.com/api/v1" class="project-link">View Project →</a>
+						</div>
+						<div class="project-card">
+							<h3>Faculty Time Tracking Application (FTTA)</h3>
+							<p>A full-stack application that helps the admin track faculty sessions,
+								and monitor active faculty to assign them tasks efficiently.</p>
+							<a href="https://ftta.vercel.app" class="project-link">View Project →</a>
+						</div>
+					</div>
+				</section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="page-section">
-                <div class="section-banner">
-                    <img src="assets/escher-drawings-kunst.jpg" alt="spiral-stairs">
-                </div>
-                <h2>Contact</h2>
-                <p>Let's connect! Feel free to reach out through any of these channels:</p>
-                <div class="contact-links">
-                    <a href="mailto:janabalu694@gmail.com" class="contact-link">Email</a>
-                    <a href="https://www.github.com/janardhan345" class="contact-link">GitHub</a>
-                    <a href="https://www.linkedin.com/in/janardhan345" class="contact-link">LinkedIn</a>
-                </div>
-            </section>
-        </main>
+				<!-- Blog Section -->
+				<section id="blog" class="page-section">
+					<div class="section-banner">
+						<img src="assets/mc-escher-spherical-world.jpg" alt="sperical_world">
+					</div>
+					<h2>Blog</h2>
+					<div class="blog-list">
+						<article class="blog-item">
+							<h3>The True Purpose of Chess</h3>
+							<span class="blog-date">July 08, 2026</span>
+							<p>Chess makes us think like strategists and also helps us think in patterns. first don't let these thoughts come while playing cause
+								you will gradually understand what skills you are gaining while playing chess and learn how to apply it in programs or even in real life as well.</p>
+							<a href="blog.html#BL-01" class="read-more">Read more →</a>
+						</article>
+						<article class="blog-item">
+							<h3>How I built it - CANSAT GUI</h3>
+							<span class="blog-date">November 02, 2025</span>
+							<p>As I joined the team I was instructed to build the GUI using pyQt or even use C++, cause that's</p>
+							<a href="blog.html#BL-02" class="read-more">Read more →</a>
+						</article>
+						<article class="blog-item">
+							<h3>Should we Use AI to code ?</h3>
+							<span class="blog-date">March 03, 2026</span>
+							<p>There are two sides to this: use AI to code and do the thinking yourself...</p>
+							<a href="blog.html#BL-04" class="read-more">Read more →</a>
+						</article>
+						<article class="blog-item">
+							<h3>FTTA - Building for 500+ Users</h3>
+							<span class="blog-date">August 05, 2026</span>
+							<p>How I built a full-stack app with RBAC via Passport.js and Google OAuth, now used by 500+ users in production.</p>
+							<a href="blog.html#BL-05" class="read-more">Read more →</a>
+						</article>
+						<article class="blog-item">
+							<h3>IMDF - Filtering Images by Metadata</h3>
+							<span class="blog-date">August 10, 2026</span>
+							<p>Upload images to the cloud and filter them by geo-location, date and device name with a REST API.</p>
+							<a href="blog.html#BL-06" class="read-more">Read more →</a>
+						</article>
+					</div>
+				</section>
+			</main>
+			<!-- Right Sidebar - Page Outline -->
+			<aside class="sidebar-right">
+				<div class="outline-header">On this page</div>
+				<nav class="outline-nav">
+					<ul id="outlineList"></ul>
+				</nav>
+			</aside>
+		</div>
 
-        <!-- Right Sidebar - Page Outline -->
-        <aside class="sidebar-right">
-            <div class="outline-header">On this page</div>
-            <nav class="outline-nav">
-                <ul id="outlineList"></ul>
-            </nav>
-        </aside>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>
