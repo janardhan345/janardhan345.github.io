@@ -233,6 +233,39 @@ body {
     color: var(--text-secondary);
 }
 
+.page-section a,
+.blog-list a,
+.main-content a,
+.sidebar-right a,
+.logo a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
+    text-decoration-color: color-mix(in srgb, var(--accent) 70%, transparent);
+    transition: color 0.2s ease, text-decoration-color 0.2s ease, opacity 0.2s ease;
+}
+
+.page-section a:hover,
+.blog-list a:hover,
+.main-content a:hover,
+.sidebar-right a:hover,
+.logo a:hover {
+    color: var(--text-primary);
+    text-decoration-color: var(--text-primary);
+    opacity: 1;
+}
+
+.page-section a:focus-visible,
+.blog-list a:focus-visible,
+.main-content a:focus-visible,
+.sidebar-right a:focus-visible,
+.logo a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 /* Skills Section */
 .skills-container {
     display: grid;
@@ -448,7 +481,6 @@ body {
 
     .section-banner {
         width: calc(100% + 4rem);
-        margin: -2rem -2rem 2rem -2rem;
         height: 250px;
     }
 
@@ -501,7 +533,6 @@ body {
 
     .section-banner {
         width: calc(100% + 3rem);
-        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
         height: 200px;
     }
 
