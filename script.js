@@ -1,5 +1,24 @@
 // Theme Toggle
 const themeBtn = document.getElementById('themeBtn');
+const aiToCodeBanner = document.getElementById('aiToCodeBanner');
+const guiBuiltBanner = document.getElementById('guiBuiltBanner');
+const favSwBanner = document.getElementById('favSwBanner');
+
+function updateThemeImage() {
+    const isDarkMode = document.body.classList.contains('dark-mode');
+
+    if (aiToCodeBanner) {
+        aiToCodeBanner.src = isDarkMode ? 'assets/AI to code-dark.png' : 'assets/AI to code.png';
+    }
+
+    if (guiBuiltBanner) {
+        guiBuiltBanner.src = isDarkMode ? 'assets/GUI - built-dark.png' : 'assets/GUI - built.png';
+    }
+
+    if (favSwBanner) {
+        favSwBanner.src = isDarkMode ? 'assets/Fav -SW-dark.png' : 'assets/Fav -SW.png';
+    }
+}
 
 // Check for saved theme or default to dark mode
 const savedTheme = localStorage.getItem('theme') || 'light';
@@ -9,12 +28,15 @@ if (savedTheme === 'dark') {
     if (themeBtn) themeBtn.textContent = '◒ Light';
 }
 
+updateThemeImage();
+
 if (themeBtn) {
     themeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         const isDarkMode = document.body.classList.contains('dark-mode');
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         themeBtn.textContent = isDarkMode ? '◒ Light' : '◓ Dark';
+        updateThemeImage();
     });
 }
 

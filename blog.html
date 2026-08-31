@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Jana</title>
-		<link rel="icon" type="image/x-icon" href="assets/jana.png">
+		<link rel="icon" type="image/x-icon" href="assets/profile.png">
 		<!--favicon -->
 		<link rel="stylesheet" href="styles.css">
 	</head>
@@ -13,7 +13,7 @@
 			<!-- Left Sidebar Navigation -->
 			<aside class="sidebar-left">
 				<div class="logo">
-					<a href="index.html#about"><img src="assets/profile.png" height="100" alt="Logo"></a>
+					<a href="https://janardhan345.github.io"><img src="assets/profile.png" height="100" alt="Logo"></a>
 					<h1>Jana</h1>
 					<a href="https://x.com/JanaB99430"><img src="assets/x.png" height="30" width="30" alt="x"></a>
 					<a href="https://github.com/janardhan345"><img src="assets/github.png" height="30" width="30" alt="GitHub"></a>
@@ -23,6 +23,7 @@
 					<ul>
 						<li><a href="#BL-01" class="nav-link active">The True Purpose of Chess</a></li>
 						<li><a href="#BL-02" class="nav-link">Cansat GUI - How I built it</a></li>
+						<li><a href="#BL-03" class="nav-link">Softwares that I love to use</a></li>
 						<li><a href="#BL-04" class="nav-link">Should we use AI to code</a></li>
 						<li><a href="#BL-05" class="nav-link">FTTA - Building for 500+ users</a></li>
 						<li><a href="#BL-06" class="nav-link">IMDF - Filtering images by metadata</a></li>
@@ -62,7 +63,7 @@
 				</section>
 				<section id="BL-02" class="page-section">
 					<div class="section-banner">
-						<img src="assets/GUI - built.png" alt="GUI built phases">
+						<img id="guiBuiltBanner" src="assets/GUI - built.png" alt="GUI built phases">
 					</div>
 					<h2>How I built it - CANSAT GUI</h2>
 					<div class="blog-list">
@@ -86,7 +87,7 @@
 						<h3>Implementation Phase</h3>
 						<p>After completing the design and organizing the necessary assets, I planned how to implement it (the hardest part, to be honest).</p>
 						<p>I asked people on Discord how to implement this web-based GUI and also asked in subreddits for help.</p>
-						<p>One person responded well and helped build the frontend. I used HTML, Tailwind CSS, and packages such as Socket.IO client, Chart.js, Leaflet.js, and Three.js for data visualization, all added via CDN for simplicity. Then I optimized the frontend visualization by swapping in a package more suitable for telemetry. That swap really made a great difference — ApexCharts  &lt;-&gt; Chart.js. Because ApexCharts didn't support 10Hz speed, and even when it did, the visualization was too slow or got stuck at moments.</p>
+						<p>One person responded well and helped me build the frontend. I used HTML, Tailwind CSS, and packages such as Socket.IO client, Chart.js, Leaflet.js, and Three.js for data visualization, all added via CDN for simplicity. Then I optimized the frontend visualization by swapping in a package more suitable for telemetry. That swap really made a great difference — ApexCharts  &lt;-&gt; Chart.js. Because ApexCharts didn't support 10Hz speed, and even when it did, the visualization was too slow or got stuck at moments.</p>
 						<p>Now to the backend — this part was supposed to be done first, but my lack of knowledge at that time made me lean toward the frontend. But now I realize backend suits me a lot. So I started learning backend concepts and then chose Node.js, for one reason: I didn't want to switch languages. Then the important concepts came into play: <code>events</code>, <code>eventListener</code>, <code>eventEmitter</code>, <code>Web Sockets</code>, <code>Socket.io</code>.</p>
 						<hr>
 						<h3>Testing phase & Conclusion</h3>
@@ -96,21 +97,75 @@
 					</div>
 					<hr>
 				</section>
+				<section id="BL-03" class="page-section">
+					<div class="section-banner">
+						<img id="favSwBanner" src="assets/Fav -SW.png" alt="fav softwares">
+					</div>
+					<h2>Softwares that I Love to use</h2>
+					<span class="blog-date">August 31, 2026</span>
+					<h3>Zen Browser</h3>
+					<br>
+					<img src="assets/zen.png" alt="zen-browser" class="image-view">
+					<br>
+					<p>There are many good reasons for using <a href="https://zen-browser.app">Zen Browser</a>, but let's talk about the Default browser <i>Chrome</i>, It's not bad neither good as well, the horizontal tab manager, need to switch to a new tab if I have to use different account, Performance, its so visible and you can check in Task manager that Chrome consumes about ~ 30 - 100% of resources, meanwhile Zen consumes only about ~ 3 - 20% even at its peak load It won't cross 30%. Now I want to tell you the reasons I use Zen</p>
+					<ol>
+						<li><i>The Tab management</i>: Vertical Tab manager, firefox browser already has this what's new here, its the compact mode that would open/close the sidebar just with hover/keyboard shortcut/customized shortcuts provided by them.</li>
+						<li><i>Containers / Workspaces</i>: Just like we devs use containers inside a computer, here they have containers in browser to have separate google accounts for a better experience with linked apps with multiple accounts and we can shift from one container to another just by clicking buttons at the bottom</li>
+						<li><i>Folders</i>: We can create folders and have multiple relevant sites in there, I use this categorizing sites I visit frequently (Blog, Docs, Media) and I often visit such as (Projects folder each with DB, Cloud, PaaS services site)</li>
+						<li><i>Essential Tabs</i>: Pin the sites we use the most such as Whatsapp, YT etc. some people use these applications locally but I will come to it later.</li>
+						<li><i>Themes & Extensions</i>: Great marketplace by <a href="https://sineorg.github.io/store">Sine</a>
+						and most popular theme is Nebula, but I use Arc for simple interface but with same transparent & blur feel. Arc 2.0 is not just a theme it has many significant featurers such as downloading sites locally and it looks amazing and feels the same way of locally installed apps.</li>
+						<li><i>Keyboard shortcuts</i>: A feature I expect in all kind of applications is keyboard-driven support and customizing keyboard shortcuts. I won't expect this feature in designer softwares though 😅.</li>
+						<li><i>Other Reasons</i>: Split view, Glance, Updates that genuinely fixes things and add even improvements and Finally this is an Free and an Open source project, I would likely be a donor/contributor in near future.</li>
+					</ol>
+					<br>
+					<h3>Obsidian.md</h3>
+					<p>I have been taking notes for more than 4 years and this is the one I will stick with forever, I have previously used OneNote from Microsoft and In mobile I used Xiaomi's default note taking app, those are good for simple note takings, OneNote is a good one to organize unstructured ideas in their whiteboard like interface, Its not strict and structured that's a problem and the way we organize notes totally changes in <a href="https://obsidian.md">Obsidian</a></p>
+					<img src="assets/obs.png" alt="obsidian" class="image-view">
+					<br>
+					<p>Obsidian is a markdown based note-taking software that is strict and not strict, structured and unstructured because its totally upto the users how they use this software.</p>
+					<h4>Reasons to use Obsidian:</h4>
+					<br>
+					<ol>
+						<li><i>Vaults</i>: Many may see maitain just one vault but I prefer to split them into Primary and Secondary vault to avoid complexity, afterall that's the whole purpose.</li>
+						<li><i>Markdown</i>: Many people hate markdown as LLMS mass produced them, but I have been using this way before LLMs/AI got popular. its a simple syntax to create neat documents and someone who read and write a lot of readme.md this is great.</li>
+						<li><i>Community Plugins</i>: Obsidian is not open-source and I respect it and Kepano the CEO of the company explained it and its understandable. But we users as devs can create our features and publish them as plugins, so we can have impossible feature any note taking can ever think, the most popular one is Excalidraw plugin, yes Excalidraw inside your note taking app and so many includes extra ordinary plugins & themes published by devs and official team as well.</li>
+						<li><i>Local Files</i>: All these files are in local computer, they ain't getting anywhere, but if you want to sync with mobile obsidian app or other desktops, you can buy their subscription or use a free plugin that provides the same sync feature with clouds such as Drive, OneDrive and even advanced Git and Github yeah having version control of your notes is an unexpected feature to have. there is no limits in this software with the growing community. Obsidian currently have a business model of cloud subscriptions that include Sync feature and publish where you can publish your notes in public as notes in their explicit obsidian domain great feature for non programmers such as Bloggers/Authors.</li>
+						<li><i>Other reasons/features</i>: Web viewer,Graph view(Backlinks), Bases, Bookmarks, Command palette and countless plugins from the community.</li>
+					</ol>
+					<br>
+					<h3>WSL- Windows Subsystem for Linux</h3>
+					<br>
+					<img src="assets/wsl.png" alt="wsl-repo" class="image-view">
+					<br>
+					<p>Most of the Dev community hates Microsoft, that's not what I wanna talk here cause no human is capable of defending that, but Microsoft has produced something really great that makes me appreciate Windows?, I never thought I would say this but WSL is one of the greatest package I use as my current dev environment. for context WSL is Linux inside windows not using VM / Dual boot that's the actual point it's a different implementation that uses the same resource that windows use not allocated separately for Linux, cause this is a software thats runs just like any other Windows Software.</p>
+					<h4>The Reasons I use it are simple:</h4>
+					<br>
+					<ol>
+						<li>Windows isn't the best dev environment out there.</li>
+						<li>Linux CLI inside windows (Great for Dev environments such as having nvm, pipx, docker cli and great for usign CLI / TUI applications)</li>
+						<li>Can install any distro as you want (doesn't occupy more than 1 to 3 GB), I only use Fedora for simplicity never had the need for more than one distro, even If I needed I would dev containers, well take a look</li>
+					</ol>
+					<br>
+					<img src="assets/distro.png" alt="distro" class="image-view">
+					<br>
+					<p>There are many CLI / TUI applications I love to discuss about, but that's for another day, thanks for making it this far, I wish you good luck in whatever pursue.</p>
+				</section>
 				<section id="BL-04" class="page-section">
 					<div class="section-banner">
-						<img src="assets/AI to code.png" alt="My Favorite Softwares">
+						<img id="aiToCodeBanner" src="assets/AI to code.png" alt="My Favorite Softwares">
 					</div>
 					<h2>Should we use AI to code or do it ourselves</h2>
 					<div class="blog-list">
 						<span class="blog-date">March 03, 2026</span>
 						<p>There are two sides to this:</p>
 						<ol>
-							<li>Business-oriented — use AI for a productivity-rich workflow: implement and fail fast, iterate until the best outcome, automate tasks, and focus on<b>
+							<li>Business-oriented — use AI for a productivity-rich workflow: implement and fail fast, iterate until the best outcome, automate tasks, and focus on<i>
 									designing the architecture of the system
-								</b>.</li>
+								</i>.</li>
 							<li>From some experienced developers' POV — don't let slop code enter your codebase, and use your brain to think and code.</li>
 						</ol>
-						<p>I think I can draw the line: <b>use AI to code, but do the thinking yourself</b>. Another thing — you have to understand what the code actually does before pushing it or adding a new feature.</p>
+						<p>I think I can draw the line: <i>use AI to code, but do the thinking yourself</i>. Another thing — you have to understand what the code actually does before pushing it or adding a new feature.</p>
 						<p>We can't totally neglect AI — it is really useful for boilerplate code and also good at teaching. If privacy is a concern, we can move to local LLMs, but the cost is literally huge for the GPU and computing power. My work isn't that secret, so I choose the normal path. I use OpenCode and Herdr with free AI models, since my use cases never exceeded that need. I'm also trying to use the bmad-method for the agents &amp; skills and customize them to my use cases. In the future I'll try to add my workflow here.</p>
 						<p>As a Backend Engineer, I prefer to focus on the logic and content of this site, so I use AI for repetitive frontend work like making the layout responsive. I wouldn't let AI write the content of this site — I use it for boring work and never let it touch the organic content and creative thinking process.</p>
 						<p>Being an extremist never ends well, and we've seen this pattern in history many times. So learn to be in the gray area.</p>

@@ -9,7 +9,7 @@
     --bg-primary: #b6b6b6;
     --bg-secondary: #a5a5a5;
     --bg-tertiary: #a6f5e6;
-    --text-primary: #292927;
+    --text-primary: #272829;
     --text-secondary: #292927;
     --text-muted: #6f6b63;
     --border-color: #d8d5cd;
@@ -46,9 +46,13 @@ body {
     line-height: 1.6;
 }
 
+.p {
+    font-size: 4rem;
+}
+
 .container {
     display: grid;
-    grid-template-columns: fit-content(320px) minmax(0, 1fr) 280px;
+    grid-template-columns: 250px 1fr 280px;
     min-height: 100vh;
     gap: 0;
 }
@@ -161,6 +165,16 @@ body {
     border-radius: 16px;
     overflow: hidden;
     position: relative;
+}
+
+.image-view {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    margin: 1.5rem 0;
+    object-fit: cover;
 }
 
 .section-banner img {
@@ -421,7 +435,7 @@ body {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .container {
-        grid-template-columns: fit-content(280px) minmax(0, 1fr);
+        grid-template-columns: 200px 1fr;
     }
 
     .sidebar-right {
@@ -436,6 +450,11 @@ body {
         width: calc(100% + 4rem);
         margin: -2rem -2rem 2rem -2rem;
         height: 250px;
+    }
+
+    .image-view {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -484,6 +503,11 @@ body {
         width: calc(100% + 3rem);
         margin: -1.5rem -1.5rem 1.5rem -1.5rem;
         height: 200px;
+    }
+
+    .image-view {
+        width: 100%;
+        height: auto;
     }
 
     .projects-grid {
