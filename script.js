@@ -20,6 +20,33 @@ function updateThemeImage() {
     }
 }
 
+function renderMermaidDiagrams() {
+    if (typeof mermaid === 'undefined') return;
+
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'loose',
+        theme: isDarkMode ? 'dark' : 'default',
+        flowchart: {
+            curve: 'basis',
+            htmlLabels: true,
+            useMaxWidth: true
+        },
+        themeVariables: {
+            primaryTextColor: isDarkMode ? '#f5f5f4' : '#1f2937',
+            primaryBorderColor: isDarkMode ? '#8b8680' : '#334155',
+            lineColor: isDarkMode ? '#d4d4d4' : '#475569',
+            tertiaryColor: isDarkMode ? '#1f2937' : '#ecfeff',
+            mainBkg: isDarkMode ? '#1f2937' : '#f8fafc'
+        }
+    });
+
+    mermaid.run({
+        nodes: document.querySelectorAll('.mermaid')
+    });
+}
+
 // Check for saved theme or default to dark mode
 const savedTheme = localStorage.getItem('theme') || 'light';
 
@@ -29,6 +56,7 @@ if (savedTheme === 'dark') {
 }
 
 updateThemeImage();
+renderMermaidDiagrams();
 
 if (themeBtn) {
     themeBtn.addEventListener('click', () => {
@@ -37,6 +65,7 @@ if (themeBtn) {
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
         themeBtn.textContent = isDarkMode ? '◒ Light' : '◓ Dark';
         updateThemeImage();
+        renderMermaidDiagrams();
     });
 }
 
