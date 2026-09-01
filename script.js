@@ -8,15 +8,15 @@ function updateThemeImage() {
     const isDarkMode = document.body.classList.contains('dark-mode');
 
     if (aiToCodeBanner) {
-        aiToCodeBanner.src = isDarkMode ? 'assets/AI to code-dark.png' : 'assets/AI to code.png';
+        aiToCodeBanner.src = isDarkMode ? 'assets/ai-to-code-dark.png' : 'assets/ai-to-code.png';
     }
 
     if (guiBuiltBanner) {
-        guiBuiltBanner.src = isDarkMode ? 'assets/GUI - built-dark.png' : 'assets/GUI - built.png';
+        guiBuiltBanner.src = isDarkMode ? 'assets/gui-built-dark.png' : 'assets/gui-built.png';
     }
 
     if (favSwBanner) {
-        favSwBanner.src = isDarkMode ? 'assets/Fav -SW-dark.png' : 'assets/Fav -SW.png';
+        favSwBanner.src = isDarkMode ? 'assets/fav-sw-dark.png' : 'assets/fav-sw.png';
     }
 }
 
@@ -47,7 +47,7 @@ function renderMermaidDiagrams() {
     });
 }
 
-// Check for saved theme or default to dark mode
+// Check for saved theme or default to light mode
 const savedTheme = localStorage.getItem('theme') || 'light';
 
 if (savedTheme === 'dark') {
@@ -269,6 +269,106 @@ function setupMobileMenu() {
 }
 
 setupMobileMenu();
+
+// Blog meta: read time + views
+const WORDS_PER_MIN = 200;
+const DEFAULT_VIEWS = {
+    'BL-01': 34,
+    'BL-02': 28,
+    'BL-03': 12,
+    'BL-04': 31,
+    'BL-05': 19,
+    'BL-06': 24
+};
+
+function formatViews(n) {
+    if (n >= 1000) {
+        const k = (n / 1000).toFixed(1).replace(/\.0$/, '');
+        return k + 'k';
+    }
+    return String(n);
+}
+
+function getViews(id) {
+    const stored = localStorage.getItem('pfv3-views-' + id);
+    if (stored !== null) return parseInt(stored, 10);
+    return DEFAULT_VIEWS[id] ?? 0;
+}
+
+function migrateOldViews() {
+    const OLD_DEFAULTS = [342, 892, 127, 540, 210, 189];
+    Object.keys(DEFAULT_VIEWS).forEach(id => {
+        const stored = localStorage.getItem('pfv3-views-' + id);
+        if (stored !== null && OLD_DEFAULTS.includes(parseInt(stored, 10))) {
+            localStorage.setItem('pfv3-views-' + id, String(DEFAULT_VIEWS[id]));
+        }
+    });
+}
+
+function setViews(id, n) {
+    localStorage.setItem('pfv3-views-' + id, String(n));
+}
+
+function updateViewsDisplay(id) {
+    const n = getViews(id);
+    const formatted = formatViews(n);
+    document.querySelectorAll(`[data-views="${id}"]`).forEach(el => {
+        el.textContent = `👁 ${formatted} views`;
+        el.title = `${n} views`;
+        el.setAttribute('aria-label', `${n} views`);
+    });
+}
+
+function updateAllViewsDisplay() {
+    Object.keys(DEFAULT_VIEWS).forEach(updateViewsDisplay);
+    // also handle any other data-views present
+    document.querySelectorAll('[data-views]').forEach(el => {
+        const id = el.getAttribute('data-views');
+        if (!(id in DEFAULT_VIEWS)) updateViewsDisplay(id);
+    });
+}
+
+function incrementView(id) {
+    if (!id || !id.startsWith('BL-')) return;
+    // avoid double-count in same session navigation if needed? Count every showSection call
+    const n = getViews(id) + 1;
+    setViews(id, n);
+    updateViewsDisplay(id);
+}
+
+function initReadTime() {
+    document.querySelectorAll('.page-section[id^="BL-"]').forEach(section => {
+        const id = section.id;
+        const container = section.querySelector('.blog-list');
+        if (!container) return;
+        const text = container.innerText || container.textContent || '';
+        const words = text.trim().split(/\s+/).filter(Boolean).length;
+        const mins = Math.max(1, Math.ceil(words / WORDS_PER_MIN));
+        document.querySelectorAll(`[data-read="${id}"]`).forEach(el => {
+            el.textContent = `${mins} min read`;
+            el.title = `${words} words · ${mins} min read`;
+        });
+    });
+    // also compute for index preview items that may not have full text, fallback keeps hardcoded value
+}
+
+// Integrate with navigation
+const _origShowSection = showSection;
+showSection = function(sectionId) {
+    _origShowSection(sectionId);
+    if (sectionId && sectionId.startsWith('BL-')) {
+        incrementView(sectionId);
+    }
+};
+
+migrateOldViews();
+initReadTime();
+updateAllViewsDisplay();
+// count initial view if starting on a blog post (initial showSection ran before wrapper)
+const _initialId = getInitialSectionId();
+if (_initialId && _initialId.startsWith('BL-')) {
+    incrementView(_initialId);
+}
 
 // Smooth scroll behavior
 document.documentElement.style.scrollBehavior = 'smooth';

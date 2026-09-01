@@ -3,9 +3,14 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Jana</title>
+		<title>Jana — Blog</title>
+		<meta name="description" content="Blog by Janardhan — pattern thinking with chess, building the CANSAT GUI, software I love to use, AI-assisted coding, FTTA and IMDF case studies.">
+		<meta property="og:title" content="Jana — Blog">
+		<meta property="og:description" content="Writings on engineering, tooling, and building real-world systems.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://janardhan345.github.io/blog.html">
+		<meta property="og:image" content="assets/profile.png">
 		<link rel="icon" type="image/x-icon" href="assets/profile.png">
-		<!--favicon -->
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
@@ -13,20 +18,20 @@
 			<!-- Left Sidebar Navigation -->
 			<aside class="sidebar-left">
 				<div class="logo">
-					<a href="https://janardhan345.github.io"><img src="assets/profile.png" height="100" alt="Logo"></a>
+					<a href="https://janardhan345.github.io"><img src="assets/profile.png" height="100" alt="Jana logo"></a>
 					<h1>Jana</h1>
-					<a href="https://x.com/JanaB99430"><img src="assets/x.png" height="30" width="30" alt="x"></a>
-					<a href="https://github.com/janardhan345"><img src="assets/github.png" height="30" width="30" alt="GitHub"></a>
-					<a href="mailto:janabalu694@gmail.com"><img src="assets/gmail.png" height="30" width="30" alt="gmail"></a>
+					<a href="https://x.com/JanaB99430" target="_blank" rel="noopener noreferrer"><img src="assets/x.png" height="30" width="30" alt="X (formerly Twitter)"></a>
+					<a href="https://github.com/janardhan345" target="_blank" rel="noopener noreferrer"><img src="assets/github.png" height="30" width="30" alt="GitHub"></a>
+					<a href="mailto:janabalu694@gmail.com"><img src="assets/gmail.png" height="30" width="30" alt="Gmail"></a>
 				</div>
 				<nav class="nav-main">
 					<ul>
 						<li><a href="#BL-01" class="nav-link active">The True Purpose of Chess</a></li>
-						<li><a href="#BL-02" class="nav-link">Cansat GUI - How I built it</a></li>
-						<li><a href="#BL-03" class="nav-link">Softwares that I love to use</a></li>
-						<li><a href="#BL-04" class="nav-link">Should we use AI to code</a></li>
-						<li><a href="#BL-05" class="nav-link">FTTA - Building for 500+ users</a></li>
-						<li><a href="#BL-06" class="nav-link">IMDF - Filtering images by metadata</a></li>
+						<li><a href="#BL-02" class="nav-link">CANSAT GUI — How I Built It</a></li>
+						<li><a href="#BL-03" class="nav-link">Software I Love to Use</a></li>
+						<li><a href="#BL-04" class="nav-link">Should We Use AI to Code?</a></li>
+						<li><a href="#BL-05" class="nav-link">FTTA — Building for 500+ Users</a></li>
+						<li><a href="#BL-06" class="nav-link">IMDF — Filtering Images by Metadata</a></li>
 					</ul>
 				</nav>
 				<div class="theme-toggle">
@@ -39,13 +44,19 @@
 				<!-- Blog Section -->
 				<section id="BL-01" class="page-section">
 					<div class="section-banner">
-						<img src="assets/mc-escher-chess.jpg" alt="MC Escher Chess Lithograph">
+						<img src="assets/mc-escher-chess.jpg" alt="M.C. Escher Chess Lithograph">
 					</div>
 					<h2>The True Purpose of Chess and How It Really Helps in Pattern Thinking</h2>
 					<div class="blog-list">
-						<span class="blog-date">July 08, 2026</span>
+						<div class="blog-meta">
+							<span class="blog-date">July 08, 2026</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-read" data-read="BL-01">2 min read</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-views" data-views="BL-01">👁 0 views</span>
+						</div>
 						<p>Chess makes us think like strategists and also helps us think in patterns. First, don't let these thoughts occupy you while playing, because you will gradually understand what skills you are gaining while playing chess and learn how to apply them in programs — and even in real life.</p>
-						<p>There are 3 crucial things we do to win, or rather, rules of chess make us do.</p>
+						<p>There are 3 crucial things we do to win, or rather, rules of chess make us do:</p>
 						<ol>
 							<li>Analyzing the opponent's move</li>
 							<li>Calculating our possible moves</li>
@@ -62,14 +73,20 @@
 					</div>
 				</section>
 				<section id="BL-02" class="page-section">
-<div class="section-banner">
-<img id="guiBuiltBanner" src="assets/GUI - built.png" alt="GUI built phases">
-</div>
-<h2>How I built it - CANSAT GUI</h2>
-<div class="blog-list">
-<span class="blog-date">November 02, 2025</span>
-<h3>The Beginning</h3>
-<p>As I joined the team, I was instructed to build the GUI using pyQt or even C++, because that's the usual way to build a GUI that connects with hardware components (Teensy 4.1 microcontroller, BME, BMP, IMU and other sensors, resistors, capacitors, etc.) which communicate through an XBee module for long-distance communication over about 1000m. All of this setup connects to the laptop running the GUI via USB cable.</p>
+					<div class="section-banner">
+						<img id="guiBuiltBanner" src="assets/gui-built.png" alt="GUI built phases">
+					</div>
+					<h2>How I Built It — CANSAT GUI</h2>
+					<div class="blog-list">
+						<div class="blog-meta">
+							<span class="blog-date">November 02, 2025</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-read" data-read="BL-02">3 min read</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-views" data-views="BL-02">👁 0 views</span>
+						</div>
+						<h3>The Beginning</h3>
+						<p>As I joined the team, I was instructed to build the GUI using PyQt or even C++, because that's the usual way to build a GUI that connects with hardware components (Teensy 4.1 microcontroller, BME, BMP, IMU and other sensors, resistors, capacitors, etc.) which communicate through an XBee module for long-distance communication over about 1000 m. All of this setup connects to the laptop running the GUI via USB cable.</p>
 						<div class="mermaid">
 flowchart TD
     A[Teensy 4.1 + sensors] --> B[XBee telemetry]
@@ -78,12 +95,12 @@ flowchart TD
     D --> E[Dashboard panels]
     E --> F[Charts, maps, logs]
     F --> G[Analysis and decision making]
-</div>
-						<p>This is the Actual flow</p>
+						</div>
+						<p>This is the actual flow.</p>
 						<hr>
-						<h3>Web GUI &amp; Design phase</h3>
+						<h3>Web GUI &amp; Design Phase</h3>
 						<p>But I didn't want to switch to Python or C++/Qt at that time, so I thought: what if I made this a web GUI? Yes, it's possible, it has more features, and the community support is huge.</p>
-						<p>I started designing the GUI pages in Figma, figuring out what was essential and how to organize the telemetry data and visualize it in a meaningful way. So I categorized each telemetry data into sections such as:</p>
+						<p>I started designing the GUI pages in Figma, figuring out what was essential and how to organize the telemetry data and visualize it in a meaningful way. So I categorized each type of telemetry data into sections such as:</p>
 						<ul>
 							<li>Home page (contains all telemetry data)</li>
 							<li>Primary Sensors (crucial telemetry data for the competition)</li>
@@ -95,10 +112,10 @@ flowchart TD
 						<h3>Implementation Phase</h3>
 						<p>After completing the design and organizing the necessary assets, I planned how to implement it (the hardest part, to be honest).</p>
 						<p>I asked people on Discord how to implement this web-based GUI and also asked in subreddits for help.</p>
-						<p>One person responded well and helped me build the frontend. I used HTML, Tailwind CSS, and packages such as Socket.IO client, Chart.js, Leaflet.js, and Three.js for data visualization, all added via CDN for simplicity. Then I optimized the frontend visualization by swapping in a package more suitable for telemetry. That swap really made a great difference — ApexCharts  &lt;-&gt; Chart.js. Because ApexCharts didn't support 10Hz speed, and even when it did, the visualization was too slow or got stuck at moments.</p>
-<p>Now to the backend — this part was supposed to be done first, but my lack of knowledge at that time made me lean toward the frontend. But now I realize backend suits me a lot. So I started learning backend concepts and then chose Node.js, for one reason: I didn't want to switch languages. Then the important concepts came into play: <code>events</code>, <code>eventListener</code>, <code>eventEmitter</code>, <code>Web Sockets</code>, <code>Socket.io</code>.</p>
+						<p>One person responded well and helped me build the frontend. I used HTML, Tailwind CSS, and packages such as Socket.IO client, Chart.js, Leaflet.js, and Three.js for data visualization, all added via CDN for simplicity. Then I optimized the frontend visualization by swapping in a package more suitable for telemetry. That swap really made a great difference — ApexCharts &lt;-&gt; Chart.js — because ApexCharts didn't support 10 Hz updates, and even when it did, the visualization was too slow or got stuck at times.</p>
+						<p>Now to the backend — this part was supposed to be done first, but my lack of knowledge at that time made me lean toward the frontend. But now I realize backend suits me a lot more. So I started learning backend concepts and then chose Node.js for one reason: I didn't want to switch languages. Then the important concepts came into play: <code>events</code>, <code>eventListener</code>, <code>eventEmitter</code>, <code>WebSockets</code>, <code>Socket.IO</code>.</p>
 						<hr>
-						<h3>Testing phase &amp; Conclusion</h3>
+						<h3>Testing Phase &amp; Conclusion</h3>
 						<p>After this, I spent my time testing and integrating the parts we built. I wrote more <code>try</code>, <code>catch</code>, <code>throw</code> as I found more edge cases during testing, and finally organized the folder structure and made it to the competition. As expected, all the other competitors built their GUI using either PyQt or C++/Qt. It doesn't matter which stack you use — it's up to us developers to make it better. The flow I made is below:</p>
 						<div class="mermaid">
 flowchart TD
@@ -110,98 +127,108 @@ flowchart TD
     F --> G[Socket.IO + charts]
     G --> H[Live team monitoring]
     H --> I[Test + iterate + compete]
-</div>
+						</div>
 						<hr>
 					</div>
 				</section>
-<section id="BL-03" class="page-section">
+				<section id="BL-03" class="page-section">
 					<div class="section-banner">
-						<img id="favSwBanner" src="assets/Fav -SW.png" alt="fav softwares">
+						<img id="favSwBanner" src="assets/fav-sw.png" alt="Favorite software">
 					</div>
-					<h2>Softwares that I Love to use</h2>
-					<span class="blog-date">August 31, 2026</span>
+					<h2>Software I Love to Use</h2>
+					<div class="blog-meta">
+						<span class="blog-date">August 31, 2026</span>
+						<span class="blog-dot">·</span>
+						<span class="blog-read" data-read="BL-03">5 min read</span>
+						<span class="blog-dot">·</span>
+						<span class="blog-views" data-views="BL-03">👁 0 views</span>
+					</div>
 					<h3>Zen Browser</h3>
-					<br>
-					<img src="assets/zen.png" alt="zen-browser" class="image-view">
-					<br>
-					<p>There are many good reasons for using <a href="https://zen-browser.app">Zen Browser</a>, but let's talk about the Default browser <i>Chrome</i>, It's not bad neither good as well, the horizontal tab manager, need to switch to a new tab if I have to use different account, Performance, its so visible and you can check in Task manager that Chrome consumes about ~ 30 - 100% of resources, meanwhile Zen consumes only about ~ 3 - 20% even at its peak load It won't cross 30%. Now I want to tell you the reasons I use Zen</p>
+					<img src="assets/zen.png" alt="Zen Browser screenshot" class="image-view">
+					<p>There are many good reasons to use <a href="https://zen-browser.app" target="_blank" rel="noopener noreferrer">Zen Browser</a>, but let's first talk about the default browser, <i>Chrome</i>. It's not bad, but it's not great either. It uses a horizontal tab manager, and you need to switch profiles or open a new window to use a different account. The performance difference is obvious — if you check Task Manager, Chrome consumes around 30–100% of system resources, while Zen typically uses only 3–20% and rarely exceeds 30% even under peak load. Here are the reasons I use Zen:</p>
 					<ol>
-						<li><i>The Tab management</i>: Vertical Tab manager, firefox browser already has this what's new here, its the compact mode that would open/close the sidebar just with hover/keyboard shortcut/customized shortcuts provided by them.</li>
-						<li><i>Containers / Workspaces</i>: Just like we devs use containers inside a computer, here they have containers in browser to have separate google accounts for a better experience with linked apps with multiple accounts and we can shift from one container to another just by clicking buttons at the bottom</li>
-						<li><i>Folders</i>: We can create folders and have multiple relevant sites in there, I use this categorizing sites I visit frequently (Blog, Docs, Media) and I often visit such as (Projects folder each with DB, Cloud, PaaS services site)</li>
-						<li><i>Essential Tabs</i>: Pin the sites we use the most such as Whatsapp, YT etc. some people use these applications locally but I will come to it later.</li>
-						<li><i>Themes & Extensions</i>: Great marketplace by <a href="https://sineorg.github.io/store">Sine</a>
-						and most popular theme is Nebula, but I use Arc for simple interface but with same transparent & blur feel. Arc 2.0 is not just a theme it has many significant featurers such as downloading sites locally and it looks amazing and feels the same way of locally installed apps.</li>
-						<li><i>Keyboard shortcuts</i>: A feature I expect in all kind of applications is keyboard-driven support and customizing keyboard shortcuts. I won't expect this feature in designer softwares though 😅.</li>
-						<li><i>Other Reasons</i>: Split view, Glance, Updates that genuinely fixes things and add even improvements and Finally this is an Free and an Open source project, I would likely be a donor/contributor in near future.</li>
+						<li><i>Tab Management</i>: Zen offers a vertical tab manager. Firefox already has this, but what's new here is the compact mode, which opens or closes the sidebar on hover or with a customizable keyboard shortcut.</li>
+						<li><i>Containers / Workspaces</i>: Just as we use containers in development, Zen provides browser containers to keep separate Google accounts isolated. This gives you a cleaner experience across linked apps, and you can switch from one container to another with a single click.</li>
+						<li><i>Folders</i>: You can create folders for groups of related sites. I use them to categorize sites I visit frequently — for example, Blog, Docs, and Media — as well as project folders that contain database, cloud, and PaaS service links.</li>
+						<li><i>Essential Tabs</i>: You can pin the sites you use most, such as WhatsApp or YouTube. Some people prefer native desktop apps for these, but I will explain my choice later.</li>
+						<li><i>Themes &amp; Extensions</i>: Zen has a great marketplace by <a href="https://sineorg.github.io/store" target="_blank" rel="noopener noreferrer">Sine</a>. The most popular theme is Nebula, but I use Arc for its simple interface with the same transparent and blur effect. Arc 2.0 is not just a theme; it includes significant features such as the ability to install websites as local apps, which looks and feels like using native applications.</li>
+						<li><i>Keyboard Shortcuts</i>: A feature I expect in almost every application is keyboard-driven navigation and customizable shortcuts. I wouldn't expect this level of support in design software, though 😅.</li>
+						<li><i>Other Reasons</i>: Split view, Glance, and updates that genuinely fix issues and add real improvements. Finally, it is a free and open-source project, and I would like to become a donor or contributor in the near future.</li>
 					</ol>
-					<br>
 					<h3>Obsidian.md</h3>
-					<p>I have been taking notes for more than 4 years and this is the one I will stick with forever, I have previously used OneNote from Microsoft and In mobile I used Xiaomi's default note taking app, those are good for simple note takings, OneNote is a good one to organize unstructured ideas in their whiteboard like interface, Its not strict and structured that's a problem and the way we organize notes totally changes in <a href="https://obsidian.md">Obsidian</a></p>
-					<img src="assets/obs.png" alt="obsidian" class="image-view">
-					<br>
-					<p>Obsidian is a markdown based note-taking software that is strict and not strict, structured and unstructured because its totally upto the users how they use this software.</p>
+					<p>I have been taking notes for more than four years, and this is the one I will stick with. I previously used Microsoft OneNote, and on mobile I used Xiaomi's default note-taking app. Both are good for simple notes. OneNote is great for organizing unstructured ideas with its whiteboard-like interface. It's flexible and not strictly structured, which can be a drawback. The way you organize notes changes completely in <a href="https://obsidian.md" target="_blank" rel="noopener noreferrer">Obsidian</a>.</p>
+					<img src="assets/obs.png" alt="Obsidian app screenshot" class="image-view">
+					<p>Obsidian is a Markdown-based note-taking app that can be both strict and flexible, structured and unstructured — it is entirely up to you how you use it.</p>
 					<h4>Reasons to use Obsidian:</h4>
-					<br>
 					<ol>
-						<li><i>Vaults</i>: Many may see maitain just one vault but I prefer to split them into Primary and Secondary vault to avoid complexity, afterall that's the whole purpose.</li>
-						<li><i>Markdown</i>: Many people hate markdown as LLMS mass produced them, but I have been using this way before LLMs/AI got popular. its a simple syntax to create neat documents and someone who read and write a lot of readme.md this is great.</li>
-						<li><i>Community Plugins</i>: Obsidian is not open-source and I respect it and Kepano the CEO of the company explained it and its understandable. But we users as devs can create our features and publish them as plugins, so we can have impossible feature any note taking can ever think, the most popular one is Excalidraw plugin, yes Excalidraw inside your note taking app and so many includes extra ordinary plugins & themes published by devs and official team as well.</li>
-						<li><i>Local Files</i>: All these files are in local computer, they ain't getting anywhere, but if you want to sync with mobile obsidian app or other desktops, you can buy their subscription or use a free plugin that provides the same sync feature with clouds such as Drive, OneDrive and even advanced Git and Github yeah having version control of your notes is an unexpected feature to have. there is no limits in this software with the growing community. Obsidian currently have a business model of cloud subscriptions that include Sync feature and publish where you can publish your notes in public as notes in their explicit obsidian domain great feature for non programmers such as Bloggers/Authors.</li>
-						<li><i>Other reasons/features</i>: Web viewer,Graph view(Backlinks), Bases, Bookmarks, Command palette and countless plugins from the community.</li>
+						<li><i>Vaults</i>: Many people maintain just one vault, but I prefer to split mine into primary and secondary vaults to avoid complexity. After all, that is the whole point.</li>
+						<li><i>Markdown</i>: Many people dislike Markdown because LLMs have overused it, but I have been using it long before AI became popular. It is a simple syntax for creating clean documents, and for someone who reads and writes many README files, it is ideal.</li>
+						<li><i>Community Plugins</i>: Obsidian is not open source, and I respect that decision — Kepano, the CEO, has explained the reasoning and it is understandable. As developers, we can still build our own features and publish them as plugins, so you can get features no other note-taking app offers. The most popular one is the Excalidraw plugin — yes, Excalidraw inside your note-taking app — along with many other extraordinary plugins and themes published by both the community and the official team.</li>
+						<li><i>Local Files</i>: All your files stay on your local computer — they aren't going anywhere. If you want to sync with the Obsidian mobile app or other desktops, you can buy their subscription or use a free community plugin that provides the same sync capability via cloud services such as Google Drive or OneDrive, or even use Git and GitHub for version control. Having version control for your notes is an unexpected but powerful feature. There are no limits with the growing community. Obsidian also offers paid Sync and Publish features, where you can publish your notes publicly on their dedicated Obsidian domain — a great feature for non-programmers such as bloggers and authors.</li>
+						<li><i>Other Reasons / Features</i>: Web viewer, Graph view (backlinks), Bases, Bookmarks, Command Palette, and countless plugins from the community.</li>
 					</ol>
-					<br>
-					<h3>WSL- Windows Subsystem for Linux</h3>
-					<br>
-					<img src="assets/wsl.png" alt="wsl-repo" class="image-view">
-					<br>
-					<p>Most of the Dev community hates Microsoft, that's not what I wanna talk here cause no human is capable of defending that, but Microsoft has produced something really great that makes me appreciate Windows?, I never thought I would say this but WSL is one of the greatest package I use as my current dev environment. for context WSL is Linux inside windows not using VM / Dual boot that's the actual point it's a different implementation that uses the same resource that windows use not allocated separately for Linux, cause this is a software thats runs just like any other Windows Software.</p>
-					<h4>The Reasons I use it are simple:</h4>
-					<br>
+					<h3>WSL — Windows Subsystem for Linux</h3>
+					<img src="assets/wsl.png" alt="WSL repository screenshot" class="image-view">
+					<p>Most of the developer community dislikes Microsoft — that's not what I want to discuss here, because no one can fully defend its track record. However, Microsoft has built something I genuinely appreciate, even as a Windows user. I never thought I would say this, but WSL is one of the best packages I use in my current development environment. For context, WSL runs Linux inside Windows without needing a VM or dual boot. It's a different implementation that shares the same resources as Windows instead of allocating them separately, and it runs like any other Windows application.</p>
+					<h4>The reasons I use it are simple:</h4>
 					<ol>
-						<li>Windows isn't the best dev environment out there.</li>
-						<li>Linux CLI inside windows (Great for Dev environments such as having nvm, pipx, docker cli and great for usign CLI / TUI applications)</li>
-						<li>Can install any distro as you want (doesn't occupy more than 1 to 3 GB), I only use Fedora for simplicity never had the need for more than one distro, even If I needed I would dev containers, well take a look</li>
+						<li>Windows isn't the best development environment on its own.</li>
+						<li>It provides a Linux CLI inside Windows — great for development environments with tools like nvm, pipx, Docker CLI, and for using CLI/TUI applications.</li>
+						<li>You can install any distro you want (each occupies only 1–3 GB). I use Fedora for its simplicity and have never needed more than one distro. Even if I did, I would use dev containers. Take a look:</li>
 					</ol>
-					<br>
-					<img src="assets/distro.png" alt="distro" class="image-view">
-					<br>
-					<p>There are many CLI / TUI applications I love to discuss about, but that's for another day, thanks for making it this far, I wish you good luck in whatever pursue.</p>
+					<img src="assets/distro.png" alt="Available Linux distributions" class="image-view">
+					<p>There are many CLI/TUI applications I would love to discuss, but that's for another day. Thanks for making it this far — I wish you good luck in whatever you pursue.</p>
 				</section>
 				<section id="BL-04" class="page-section">
 					<div class="section-banner">
-						<img id="aiToCodeBanner" src="assets/AI to code.png" alt="My Favorite Softwares">
+						<img id="aiToCodeBanner" src="assets/ai-to-code.png" alt="Should we use AI to code illustration">
 					</div>
-					<h2>Should we use AI to code or do it ourselves</h2>
+					<h2>Should We Use AI to Code or Do It Ourselves?</h2>
 					<div class="blog-list">
-						<span class="blog-date">March 03, 2026</span>
+						<div class="blog-meta">
+							<span class="blog-date">March 03, 2026</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-read" data-read="BL-04">2 min read</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-views" data-views="BL-04">👁 0 views</span>
+						</div>
 						<p>There are two sides to this:</p>
 						<ol>
-							<li>Business-oriented — use AI for a productivity-rich workflow: implement and fail fast, iterate until the best outcome, automate tasks, and focus on<i>
-									designing the architecture of the system
-								</i>.</li>
+							<li>Business-oriented — use AI for a productivity-rich workflow: implement and fail fast, iterate until the best outcome, automate tasks, and focus on<i> designing the architecture of the system</i>.</li>
 							<li>From some experienced developers' POV — don't let slop code enter your codebase, and use your brain to think and code.</li>
 						</ol>
 						<p>I think I can draw the line: <i>use AI to code, but do the thinking yourself</i>. Another thing — you have to understand what the code actually does before pushing it or adding a new feature.</p>
-						<p>We can't totally neglect AI — it is really useful for boilerplate code and also good at teaching. If privacy is a concern, we can move to local LLMs, but the cost is literally huge for the GPU and computing power. My work isn't that secret, so I choose the normal path. I use OpenCode and Herdr with free AI models, since my use cases never exceeded that need. I'm also trying to use the bmad-method for the agents &amp; skills and customize them to my use cases. In the future I'll try to add my workflow here.</p>
-						<p>As a Backend Engineer, I prefer to focus on the logic and content of this site, so I use AI for repetitive frontend work like making the layout responsive. I wouldn't let AI write the content of this site — I use it for boring work and never let it touch the organic content and creative thinking process.</p>
+						<p>We can't totally neglect AI — it is really useful for boilerplate code and also good at teaching. If privacy is a concern, we can move to local LLMs, but the cost is literally huge for the GPU and computing power. My work isn't that secret, so I choose the normal path. I use OpenCode and Herdr with free AI models, since my use cases never exceeded that need. I'm also trying to use the bmad-method for agents &amp; skills and customize them to my use cases. In the future I'll try to add my workflow here.</p>
+						<p>As a backend engineer, I prefer to focus on the logic and content of this site, so I use AI for repetitive frontend work like making the layout responsive. I wouldn't let AI write the content of this site — I use it for boring work and never let it touch the organic content and creative thinking process.</p>
 						<p>Being an extremist never ends well, and we've seen this pattern in history many times. So learn to be in the gray area.</p>
 					</div>
 				</section>
 				<section id="BL-05" class="page-section">
-					<h2>FTTA - Building a Faculty Time Tracking Application for 500+ Users</h2>
+					<h2>FTTA — Building a Faculty Time Tracking Application for 500+ Users</h2>
 					<div class="blog-list">
-						<span class="blog-date">August 05, 2026</span>
-						<p>Most private institutions still track faculty attendance on paper or in messy spreadsheets. FTTA was built to fix that. It's a full-stack web application that lets the admin monitor faculty availability, track their sessions, and keep student attendance records - all from a single dashboard.</p>
+						<div class="blog-meta">
+							<span class="blog-date">August 05, 2026</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-read" data-read="BL-05">1 min read</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-views" data-views="BL-05">👁 0 views</span>
+						</div>
+						<p>Most private institutions still track faculty attendance on paper or in messy spreadsheets. FTTA was built to fix that. It's a full-stack web application that lets the admin monitor faculty availability, track their sessions, and keep student attendance records — all from a single dashboard.</p>
 						<p>The core requirement was access control. Only emails from the organization's allowed domains can log in, implemented with Google OAuth 2.0 and role-based access control (RBAC) through Passport.js. Admins see everything; faculty log their sessions and student details.</p>
-						<p>It's running in production right now with 500+ active users, deployed using Docker, Vercel and Heroku. The codebase is currently closed source.</p>
+						<p>It's running in production right now with 500+ active users, deployed using Docker, Vercel, and Heroku. The codebase is currently closed source.</p>
 					</div>
 				</section>
 				<section id="BL-06" class="page-section">
-					<h2>IMDF - A REST API to Filter Images by their Metadata</h2>
+					<h2>IMDF — A REST API to Filter Images by Their Metadata</h2>
 					<div class="blog-list">
-						<span class="blog-date">August 10, 2026</span>
-						<p>Image Meta Data Filter (IMDF) is a REST API that stores images in the cloud and lets you filter them by the metadata embedded in the files - geo-location, capture date, device name and more.</p>
+						<div class="blog-meta">
+							<span class="blog-date">August 10, 2026</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-read" data-read="BL-06">1 min read</span>
+							<span class="blog-dot">·</span>
+							<span class="blog-views" data-views="BL-06">👁 0 views</span>
+						</div>
+						<p>Image Metadata Filter (IMDF) is a REST API that stores images in the cloud and lets you filter them by the metadata embedded in the files — geo-location, capture date, device name, and more.</p>
 						<p>Uploads are handled with Multer, files are stored in Cloudinary, and the metadata is persisted in MongoDB. The API is built with Node.js and Express, and deployed using Docker and Render.</p>
 						<p>The server-side logic stays simple: extract the metadata on upload, store it alongside the file reference, and return filtered results based on query parameters.</p>
 					</div>
